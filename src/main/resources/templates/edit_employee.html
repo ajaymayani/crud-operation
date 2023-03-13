@@ -49,7 +49,18 @@
             <label for="salary" class="form-label">Enter Salary</label>
             <input type="text"  th:value="${employee.salary}" name="salary" class="form-control" id="salary" placeholder="Enter salary number" />
         </div>
+        <div class="mb-2">
+            <h6>Address : </h6>
+        </div>
         <div class="mb-3">
+            <label for="street" class="form-label">Enter street</label>
+            <input type="text" th:value="${employee.address.street}" name="street" class="form-control" id="street" placeholder="Enter street"/>
+        </div>
+        <div class="mb-3">
+            <label for="city" class="form-label">Enter city</label>
+            <input type="text" th:value="${employee.address.city}" name="city" class="form-control" id="city" placeholder="Enter city name"/>
+        </div>
+        <div class="mb-3 text-center">
             <button type="submit" class="btn btn-primary">Update</button>
         </div>
     </form>

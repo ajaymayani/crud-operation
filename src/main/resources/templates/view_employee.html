@@ -43,12 +43,16 @@
             <th>Id</th>
             <th>Name</th>
             <th>Salary</th>
+            <th>Street</th>
+            <th>City</th>
             <th>Action</th>
         </tr>
         <tr th:each="employee: ${employees}">
             <td th:text="${employee.id}" />
             <td th:text="${employee.name}" />
             <td th:text="${employee.salary}" />
+            <td th:text="${employee.address.street}" />
+            <td th:text="${employee.address.city}" />
             <td> <a class="btn btn-sm btn-success" th:href="@{'/edit_employee/'+${employee.id}}"> Edit </a>
                 <a class="btn btn-sm btn-danger" th:href="@{'/delete_employee/'+${employee.id}}">Delete</a> </td>
         </tr>
